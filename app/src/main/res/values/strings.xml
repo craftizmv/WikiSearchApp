@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">WikiSearchApp</string>
     <string name="search_hint">Search Wikipedia</string>
+    <string name="detail_screen">Detail Page</string>
+    <string name="check_internet">Please check your internet connection.</string>
+    <string name="no_data">No Data Present</string>
 </resources>

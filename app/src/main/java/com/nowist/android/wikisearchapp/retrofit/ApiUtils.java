@@ -1,17 +1,15 @@
 package com.nowist.android.wikisearchapp.retrofit;
 
-/**
- * Created by mayankverma on 22/07/17.
- */
+import android.content.Context;
 
 public class ApiUtils {
-    public static final String BASE_URL = "https://en.wikipedia.org/";
+    private static final String BASE_URL = "https://en.wikipedia.org/";
 
-    public static RestApiService getApiService() {
-        return RetrofitClient.getClient(BASE_URL).create(RestApiService.class);
+    public static RestApiService getApiService(Context applicationContext) {
+        return RetrofitClient.getClient(BASE_URL, applicationContext).create(RestApiService.class);
     }
 
-    public static RestApiService getApiService(String customUrl) {
-        return RetrofitClient.getClient(customUrl).create(RestApiService.class);
+    public static RestApiService getApiService(String customUrl, Context applicationContext) {
+        return RetrofitClient.getClient(customUrl, applicationContext).create(RestApiService.class);
     }
 }
